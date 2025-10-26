@@ -1,9 +1,11 @@
 import React from 'react';
 import logo from '../assets/logo.png'
+import { NavLink } from 'react-router';
+import { Github } from 'lucide-react';
 
 const Navbar = () => {
     return (
-        <div className="navbar bg-base-100 shadow-sm px-10">
+        <div className="navbar bg-base-100 shadow-sm md:px-10">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -12,25 +14,25 @@ const Navbar = () => {
                     <ul
                         tabIndex="-1"
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                        <li><a>Home</a></li>
-                        <li><a>Apps</a></li>
-                        <li><a>Installation</a></li>
+                        <li className='font-semibold text-base'><NavLink to='/home'>Home</NavLink></li>
+                        <li className='font-semibold text-base'><NavLink to='/trendingApps'>Apps</NavLink></li>
+                        <li className='font-semibold text-base'><NavLink to='/installedApps'>Installation</NavLink></li>
                     </ul>
                 </div>
                 <div className='flex gap-3 items-center'>
                     <img className='w-10' src={logo} alt="" />
-                    <a className="text-xl">HERO.IO</a>
+                    <NavLink to='/home' className="text-xl font-bold">HERO.IO</NavLink>
                 </div>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
-                    <li><a>Home</a></li>
-                    <li><a>Apps</a></li>
-                    <li><a>Installation</a></li>
+                    <li className='font-semibold text-base'><NavLink to='/home'>Home</NavLink></li>
+                    <li className='font-semibold text-base'><NavLink to='/trendingApps'>Apps</NavLink></li>
+                    <li className='font-semibold text-base'><NavLink to='/installedApps'>Installation</NavLink></li>
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn">Contribute</a>
+                <NavLink to='https://github.com/Sohaibislam45/' className="btn bg-linear-to-r from-[#632EE3] to-[#9F62F2] text-white"><Github size={16} strokeWidth={2.5} />Contribute</NavLink>
             </div>
         </div>
     );
