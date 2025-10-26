@@ -1,0 +1,398 @@
+[
+  {
+    "image": "https://i.ibb.co.com/fYwgX6Wp/settings-627654.png",
+    "title": "Settings Pro",
+    "companyName": "SysWorks",
+    "id": 1,
+    "description": "Settings Pro is designed for power users who want fast, reliable control over every aspect of their device experience. The app brings a single unified panel that consolidates system toggles, permissions, connectivity, and display profiles, allowing users to create and switch between multiple device states with a single tap. Advanced scheduling allows users to automatically change brightness, volume, and connectivity modes based on time, location, or connected devices. The profile system supports conditional rules — for example, automatically switching to a low-power profile when battery hits a threshold, or enabling a work profile during commuting hours. For privacy-conscious users, the app provides granular permission audits and one-tap reset options that show which apps access sensitive sensors. Additional features include quick-access widgets, themeable UI with icon packs, and export/import of custom profiles so advanced users can share setups. The interface emphasizes clarity and speed: heavy operations run asynchronously with minimal battery overhead. Settings Pro targets enthusiasts, testers, and professionals who need more control than stock settings provide, while still remaining approachable for casual users who simply want helpful presets and time-saving automations.",
+    "size": 12.4,
+    "reviews": 1240,
+    "ratingAvg": 4.3,
+    "downloads": 82000,
+    "ratings": [
+      { "name": "1 star", "count": 60 },
+      { "name": "2 star", "count": 80 },
+      { "name": "3 star", "count": 200 },
+      { "name": "4 star", "count": 420 },
+      { "name": "5 star", "count": 480 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/C3YskJq7/app-10008347.png",
+    "title": "AppHive",
+    "companyName": "BrightPixels",
+    "id": 2,
+    "description": "AppHive is a modern launcher and app-organizer that reimagines how you interact with hundreds of installed apps. It focuses on intelligent categorization, gesture-based navigation and a minimalistic interface that reduces home-screen clutter. AppHive uses on-device machine learning to suggest folders and groupings, learning from your usage patterns so your most-used apps are always a swipe away. The launcher supports multiple themes and adaptive icon packs, plus granular control over home-screen grid, hidden apps, and smart widgets. For privacy, AppHive isolates launch-time data and offers an instant 'focus mode' that hides social and notification-heavy apps. Power users will appreciate the customizable gestures (double-tap, two-finger swipe) and shortcuts that can trigger actions, shortcuts, or Siri/Google Assistant routines. Developers can use the provided API to integrate their apps for deeper interactions such as deep-links and suggested actions. AppHive aims to be fast, battery-friendly, and consistently up-to-date with launcher trends while keeping the user experience smooth for newcomers.",
+    "size": 24.1,
+    "reviews": 890,
+    "ratingAvg": 4.1,
+    "downloads": 54000,
+    "ratings": [
+      { "name": "1 star", "count": 70 },
+      { "name": "2 star", "count": 110 },
+      { "name": "3 star", "count": 220 },
+      { "name": "4 star", "count": 270 },
+      { "name": "5 star", "count": 220 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/27y96h7B/mozy-873134.png",
+    "title": "MozyNotes",
+    "companyName": "NoteStream",
+    "id": 3,
+    "description": "MozyNotes is a lightweight but powerful note-taking app built for speed, reliability and long-term organization. It blends the simplicity of quick notes with more advanced features like markdown support, nested tags, intelligent search and cross-device sync. Notes are organized through flexible collections and smart filters that let you create dynamic views (e.g., \"today's tasks\", \"research\", \"recipes\"). The app includes a distraction-free writing mode, inline attachments, and version history so you can roll back edits. Security features include optional end-to-end encryption for private notebooks and PIN/biometric locks for the app. MozyNotes supports collaborative editing for shared notebooks and publishes a clean export format for markdown, PDF or plain text. A unique 'capture anywhere' widget allows users to create notes from the lock screen or share sheets without launching the full app. The UI is optimized for both phones and large tablets, offering split-view editing and a compact unified editor on smaller screens. MozyNotes recently saw viral growth in several communities due to an intuitive tagging workflow and excellent syncing reliability.",
+    "size": 8.6,
+    "reviews": 14320,
+    "ratingAvg": 4.7,
+    "downloads": 1200000,
+    "ratings": [
+      { "name": "1 star", "count": 120 },
+      { "name": "2 star", "count": 200 },
+      { "name": "3 star", "count": 820 },
+      { "name": "4 star", "count": 4300 },
+      { "name": "5 star", "count": 8500 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/RGnLGgCb/menu-10336469.png",
+    "title": "MenuCraft",
+    "companyName": "UXFoundry",
+    "id": 4,
+    "description": "MenuCraft is a designer's playground for creating menu systems and navigation patterns for web and mobile apps. The app provides a library of templates, interactive previews and export-ready assets that designers and frontend engineers can integrate quickly into projects. With live previewing you can test accessibility features, keyboard navigation and responsive breakpoints in real time. MenuCraft also includes analytics that simulate click behavior and helps designers optimize for discoverability. Integration tools export code snippets in popular frameworks (React, Vue, vanilla JS), and a collaboration mode allows teams to review iterations inline with comments. Advanced features include animation timelines for menu transitions and a rules-based engine to generate contextual menus based on user roles or content. MenuCraft aims to reduce back-and-forth between design and engineering by providing exportable artifacts developers can drop into projects.",
+    "size": 33.2,
+    "reviews": 520,
+    "ratingAvg": 4.0,
+    "downloads": 21000,
+    "ratings": [
+      { "name": "1 star", "count": 40 },
+      { "name": "2 star", "count": 60 },
+      { "name": "3 star", "count": 140 },
+      { "name": "4 star", "count": 180 },
+      { "name": "5 star", "count": 100 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/k2HWnsRc/technology-11369738.png",
+    "title": "TechPulse",
+    "companyName": "DevInsights",
+    "id": 5,
+    "description": "TechPulse curates the most important developer- and tech-focused stories, tools and discussions every day. The app aggregates high-quality content from developer blogs, podcasts and technical newsletters, and combines them with concise summaries and an intelligent recommendation engine that learns what you find useful. Users can save articles for offline reading, follow specific topics or authors, and get daily digests tailored to their interests. TechPulse adds value with a built-in snippet manager for code examples — copy, format and send snippets to your teammates quickly. The app includes a developer tools hub where you can try small in-app demos for popular frameworks and libraries. Security and privacy are first-class: TechPulse runs content fetches safely and does not track user browsing beyond optional sync features. It’s aimed at developers who want to stay current without drowning in noise.",
+    "size": 42.8,
+    "reviews": 980,
+    "ratingAvg": 4.5,
+    "downloads": 90000,
+    "ratings": [
+      { "name": "1 star", "count": 30 },
+      { "name": "2 star", "count": 40 },
+      { "name": "3 star", "count": 120 },
+      { "name": "4 star", "count": 340 },
+      { "name": "5 star", "count": 450 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/Gf4NsVjs/rubik-2281742.png",
+    "title": "RubikPlay",
+    "companyName": "FunCubes",
+    "id": 6,
+    "description": "RubikPlay is an addictive, casual puzzle game that blends classic cube-solving mechanics with daily challenges, social leaderboards, and seasonal tournaments. The core gameplay focuses on short, satisfying runs perfect for a few minutes of play, but the progression system unlocks more complex modes for advanced puzzlers. The title includes a thorough tutorial and optional assist modes to make puzzles approachable to beginners. Social features let players join small clubs, participate in weekly events and share their solutions as short replays. Developers crafted the game to run smoothly across devices with optimized rendering and low battery impact. A robust analytics system helps balance difficulty and rewards regular players with curated events and cosmetic unlocks. RubikPlay went viral soon after launch due to a cross-platform tournament series and influencer-driven challenges, resulting in extensive organic growth and consistently high engagement metrics. Community-driven content and regular updates keep the game fresh and foster long-term retention.",
+    "size": 56.9,
+    "reviews": 213000,
+    "ratingAvg": 4.9,
+    "downloads": 7000000,
+    "ratings": [
+      { "name": "1 star", "count": 2500 },
+      { "name": "2 star", "count": 4000 },
+      { "name": "3 star", "count": 15000 },
+      { "name": "4 star", "count": 60000 },
+      { "name": "5 star", "count": 140000 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/nqBRCTFH/healthy-1813386.png",
+    "title": "HealthyDays",
+    "companyName": "WellnessTech",
+    "id": 7,
+    "description": "HealthyDays is a holistic wellness tracker that focuses on habit formation rather than punitive metrics. Users can track meals, hydration, sleep, workouts and mindfulness sessions with an easy-to-use daily planner. The app integrates with many wearable devices to automatically capture activity and heart-rate trends, and then suggests micro-actions to improve wellness based on simple behavioral science principles. HealthyDays also offers guided programs — such as 'Better Sleep in 21 Days' or 'Beginner Strength Kickstart' — with short daily tasks and educational content. The community features encourage accountability through small groups and streak rewards rather than broad social comparisons. Personalization is a major emphasis: plans adapt over time as users complete tasks and provide feedback. HealthyDays keeps data local by default with optional cloud sync for cross-device continuity, and a premium plan unlocks one-to-one coaching sessions and personalized meal plans.",
+    "size": 28.3,
+    "reviews": 1470,
+    "ratingAvg": 4.4,
+    "downloads": 115000,
+    "ratings": [
+      { "name": "1 star", "count": 30 },
+      { "name": "2 star", "count": 60 },
+      { "name": "3 star", "count": 230 },
+      { "name": "4 star", "count": 520 },
+      { "name": "5 star", "count": 630 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/v6sB7MtY/menu-4518101.png",
+    "title": "QuickMenu",
+    "companyName": "TapWorks",
+    "id": 8,
+    "description": "QuickMenu lets users build customizable widgets and quick-access menus that appear anywhere in the system UI. It focuses on lightweight automation: combine actions (open app, toggle a setting, send quick replies) into single tap items and group them by context. QuickMenu works as an always-available overlay or as home-screen widgets and supports multi-step actions via a simple visual builder. The app targets productivity-minded users who want to reduce friction for routine tasks, such as launching a playlist and setting Do Not Disturb at the same time. Privacy-friendly automation means personal data stays on device, and templates help new users adopt powerful shortcuts without scripting. While early users applaud the utility, some users report occasional gesture conflicts depending on the device and home-screen launcher — QuickMenu’s team releases frequent updates addressing compatibility.",
+    "size": 14.7,
+    "reviews": 3750,
+    "ratingAvg": 3.4,
+    "downloads": 18000,
+    "ratings": [
+      { "name": "1 star", "count": 1200 },
+      { "name": "2 star", "count": 800 },
+      { "name": "3 star", "count": 900 },
+      { "name": "4 star", "count": 400 },
+      { "name": "5 star", "count": 450 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/V0t0MFPP/mobile-app-17239926.png",
+    "title": "MobileStudio",
+    "companyName": "ProdApps",
+    "id": 9,
+    "description": "MobileStudio is a compact prototyping tool allowing designers and product managers to sketch, prototype and validate mobile experiences directly on-device. With an extensive UI kit, interactive transitions and a sharing link generator, teams can quickly run user tests without heavy desktop tools. The app supports live collaboration where teammates can join a session and annotate screens in real time. MobileStudio also includes a device preview mode that simulates network throttling and device-specific rendering quirks, helping designers identify layout issues early. Export features generate production-ready assets and CSS snippets to accelerate hand-offs to engineering. The app's goal is to reduce feedback cycles and lower the barrier for rapid prototyping when ideation is time-sensitive. Frequent users praise the collaboration features, while power users sometimes request deeper integration with desktop design tools.",
+    "size": 68,
+    "reviews": 640,
+    "ratingAvg": 4.2,
+    "downloads": 42000,
+    "ratings": [
+      { "name": "1 star", "count": 20 },
+      { "name": "2 star", "count": 40 },
+      { "name": "3 star", "count": 160 },
+      { "name": "4 star", "count": 220 },
+      { "name": "5 star", "count": 200 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/hF7zvz2p/app-settings-18826539.png",
+    "title": "AppTune",
+    "companyName": "TuneTech",
+    "id": 10,
+    "description": "AppTune offers a polished hub to customize app appearance, theme packs and icon overlays across the system. It simplifies theming by bundling themes with accent colors, font combinations and compatible icon packs, applied with a single tap. AppTune also provides an integrated marketplace for creators to publish themes and monetise premium designs. To ensure compatibility, AppTune includes a theme-preview sandbox that shows changes applied to common UI components before a user commits them. Power users like the granular accent controls and backup system; creators appreciate the analytics dashboard for theme performance. The app balances customization with performance — heavy changes are applied in batches to reduce UI jank and memory spikes. AppTune aims to be a hub for people who want to keep their devices looking and feeling unique without the complexity of manual theming.",
+    "size": 21.6,
+    "reviews": 510,
+    "ratingAvg": 4.0,
+    "downloads": 27000,
+    "ratings": [
+      { "name": "1 star", "count": 35 },
+      { "name": "2 star", "count": 60 },
+      { "name": "3 star", "count": 140 },
+      { "name": "4 star", "count": 160 },
+      { "name": "5 star", "count": 115 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/sdNxb4bd/social-media-17613088.png",
+    "title": "Connectly",
+    "companyName": "SocialHub",
+    "id": 11,
+    "description": "Connectly is a privacy-forward social feed designed for close friends and small groups. The platform emphasizes ephemeral sharing, private circles and fast media uploads with minimal compression. Users control who can reshare or archive content, and fine-grained privacy toggles reduce unexpected exposure. Connectly focuses on low-data usage modes and a clean UI that prioritizes conversations over algorithmic feeds. Built-in moderation tools and clear reporting flows aim to keep communities healthy. The app also integrates lightweight creator tools such as short video trimming, story templates and simple polls. While the app is optimized for smaller communities, recent updates have added features that scale to larger public groups while maintaining private controls. Connectly’s approach attracts users tired of algorithm-driven feeds who prefer a more intentional social experience.",
+    "size": 45.7,
+    "reviews": 1840,
+    "ratingAvg": 4.3,
+    "downloads": 98000,
+    "ratings": [
+      { "name": "1 star", "count": 80 },
+      { "name": "2 star", "count": 120 },
+      { "name": "3 star", "count": 300 },
+      { "name": "4 star", "count": 550 },
+      { "name": "5 star", "count": 790 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/39PQvvbh/smartphone-524597.png",
+    "title": "SmartView",
+    "companyName": "DisplayWorks",
+    "id": 12,
+    "description": "SmartView provides a low-latency casting and remote display solution that’s optimized for home networks and multimedia setups. The app supports device discovery across multiple protocols, automatic resolution scaling and hardware-accelerated encoding when available. SmartView aims to minimize input lag for presentations and casual gaming when casting from phones to TVs or other displays. The interface includes a simple file browser for local content and playlist management for continuous playback. For developers, SmartView offers an SDK to embed casting controls directly into apps. Security features include session PINs and network permissions to prevent accidental exposure. SmartView is aimed at users who want a reliable and easy casting experience without the complexity of configuring third-party software.",
+    "size": 36.4,
+    "reviews": 720,
+    "ratingAvg": 4.1,
+    "downloads": 47000,
+    "ratings": [
+      { "name": "1 star", "count": 40 },
+      { "name": "2 star", "count": 70 },
+      { "name": "3 star", "count": 170 },
+      { "name": "4 star", "count": 200 },
+      { "name": "5 star", "count": 240 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/rKB0VsZz/app-16772186.png",
+    "title": "Streamly",
+    "companyName": "MediaFlow",
+    "id": 13,
+    "description": "Streamly is a lightweight video playlist manager and player crafted for mobile users who want dependable playback without heavy bandwidth usage. The app supports curated playlists, offline downloads, and integration with cloud accounts so you can assemble personal libraries from multiple sources. Streamly focuses on smart buffering techniques and lightweight codecs to ensure smooth playback on slower networks. The UI emphasizes discoverability through editor-curated lists and community playlists. A creator toolkit provides quick trimming, watermarking and sharing tools for short clips and highlights. Streamly saw an organic growth spike after a viral playlist feature and influencer promotion campaign, which catapulted it into wider usage across multiple regions. The engineering team prioritizes frequent small updates that improve playback quality and reduce crashes on older devices.",
+    "size": 92.1,
+    "reviews": 128000,
+    "ratingAvg": 4.7,
+    "downloads": 1200000,
+    "ratings": [
+      { "name": "1 star", "count": 2000 },
+      { "name": "2 star", "count": 3000 },
+      { "name": "3 star", "count": 15000 },
+      { "name": "4 star", "count": 32000 },
+      { "name": "5 star", "count": 77000 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/5WJ1w9ft/apps-12323022.png",
+    "title": "AppStack",
+    "companyName": "LayerLabs",
+    "id": 14,
+    "description": "AppStack helps users keep their device organized by grouping apps into smart stacks based on usage, category and context. It offers one-tap actions and suggestions for app pairings (e.g., music + navigation while driving). The app integrates with search to find apps quickly and provides a history-based quick-launch bar for recently used combos. AppStack aims to be unobtrusive and low memory, preferring to index locally rather than constantly scanning. While useful to users who juggle many apps, some reviewers report that the initial setup can be a bit finicky and that tighter OS integration would improve the experience. The team behind AppStack frequently updates the app with bug fixes and improved suggestions.",
+    "size": 29.9,
+    "reviews": 390,
+    "ratingAvg": 3.4,
+    "downloads": 15000,
+    "ratings": [
+      { "name": "1 star", "count": 60 },
+      { "name": "2 star", "count": 80 },
+      { "name": "3 star", "count": 120 },
+      { "name": "4 star", "count": 90 },
+      { "name": "5 star", "count": 40 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/PBFVv1L/app-9073129.png",
+    "title": "PulseCast",
+    "companyName": "SoundWave Labs",
+    "id": 15,
+    "description": "PulseCast aggregates podcasts and audio content into a streamlined listening experience, making it easy to find new shows and manage offline downloads. The app features smart episode recommendations, variable speed playback, and chapter markers for easier navigation. Creators can distribute via RSS or connect directly through an in-app portal to gain analytics on listener engagement. Listeners can build custom playlists, discover themed channels and subscribe to curated collections. PulseCast focuses on delivering stable playback with low memory usage and a clean interface that’s friendly to long-form listening. A premium subscription removes ads and unlocks enhanced discovery tools and higher-quality downloads.",
+    "size": 66.5,
+    "reviews": 1080,
+    "ratingAvg": 4.2,
+    "downloads": 98000,
+    "ratings": [
+      { "name": "1 star", "count": 35 },
+      { "name": "2 star", "count": 70 },
+      { "name": "3 star", "count": 220 },
+      { "name": "4 star", "count": 320 },
+      { "name": "5 star", "count": 435 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/chCH52PV/social-media-7979371.png",
+    "title": "ShareSpace",
+    "companyName": "SocialHub",
+    "id": 16,
+    "description": "ShareSpace is a private sharing app built around groups and short-lived content. It emphasizes privacy: posts expire after a configurable window and group admins can set strict sharing rules. The app is designed for families, clubs and interest-based communities who want a safe space to share moments without the pressure of public feeds. Features include ephemeral stories, moderated spaces, and simple moderation tools for admins. Integration with existing chat platforms provides a bridge for group conversations, and lightweight editing tools allow quick photo or video trims. While ShareSpace introduces a thoughtful privacy model, growth is organic as the app targets closed communities rather than mass-market feeds.",
+    "size": 54,
+    "reviews": 860,
+    "ratingAvg": 4.0,
+    "downloads": 43000,
+    "ratings": [
+      { "name": "1 star", "count": 50 },
+      { "name": "2 star", "count": 90 },
+      { "name": "3 star", "count": 210 },
+      { "name": "4 star", "count": 300 },
+      { "name": "5 star", "count": 210 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/Jw5jZCrp/app-11505462.png",
+    "title": "QuickFit",
+    "companyName": "HealthSolutions Inc",
+    "id": 17,
+    "description": "QuickFit offers short, effective workouts that fit into busy schedules; each routine is just 7–15 minutes but focused on high-intensity, bodyweight and mobility exercises. The app personalizes routines by asking a few quick preference questions and adjusting program intensity over time. QuickFit includes habit-building nudges and streaks to encourage daily consistency, plus calendar integration to schedule workouts around the user's commitments. Audio-led coaching and short video demonstrations make it accessible even without a trainer. The premium tier unlocks longer sessions, nutritional mini-guides and a personalized plan that adapts to progress metrics. QuickFit’s minimal interface and short routines make it especially popular among commuters and time-poor users who still want measurable fitness gains.",
+    "size": 22.7,
+    "reviews": 720,
+    "ratingAvg": 4.3,
+    "downloads": 67000,
+    "ratings": [
+      { "name": "1 star", "count": 20 },
+      { "name": "2 star", "count": 40 },
+      { "name": "3 star", "count": 200 },
+      { "name": "4 star", "count": 260 },
+      { "name": "5 star", "count": 200 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/WvK7dRLS/apps-2489014.png",
+    "title": "AppsBox",
+    "companyName": "BoxedApps",
+    "id": 18,
+    "description": "AppsBox is a curated discovery hub for thoughtfully selected apps across productivity, creativity and games. Each collection is handpicked by editors and includes short editorial notes explaining why a particular app shines in its category. AppsBox also offers themed bundles (e.g., 'Work from Home', 'Photo Essentials') and seasonal roundups to help users discover high-quality tools without wading through generic lists. The discovery UX prioritizes depth over breadth and aims to expose lesser-known gems alongside mainstream picks. Editor tools allow community feedback and curation suggestions to refine the catalog.",
+    "size": 15.6,
+    "reviews": 330,
+    "ratingAvg": 3.9,
+    "downloads": 19000,
+    "ratings": [
+      { "name": "1 star", "count": 40 },
+      { "name": "2 star", "count": 70 },
+      { "name": "3 star", "count": 100 },
+      { "name": "4 star", "count": 80 },
+      { "name": "5 star", "count": 40 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/DPgM0vGc/apps-5384889.png",
+    "title": "ClipMaker",
+    "companyName": "EditFlow",
+    "id": 19,
+    "description": "ClipMaker is a mobile-first video editor aimed at creators who need a fast way to produce short-form social clips. The app combines intuitive trimming, multi-clip timelines, and template-driven effects to make production easy. Users can apply transitions, add text overlays, and quickly swap aspect ratios for different platforms. ClipMaker supports export presets optimized for popular social networks and includes a media library for soundtracks and effects. The app also provides a one-tap 'boost' rendering option that balances quality and upload speed for creators on the go. ClipMaker gained traction through creator partnerships and a series of viral templates that encouraged wide sharing and re-creation — driving sustained growth and millions of downloads. Ongoing feature updates focus on collaboration, cloud sync of projects, and performance improvements for older devices.",
+    "size": 110.2,
+    "reviews": 154000,
+    "ratingAvg": 4.9,
+    "downloads": 1800000,
+    "ratings": [
+      { "name": "1 star", "count": 2000 },
+      { "name": "2 star", "count": 4000 },
+      { "name": "3 star", "count": 10000 },
+      { "name": "4 star", "count": 35000 },
+      { "name": "5 star", "count": 106000 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/CpXnWPfc/video-content-8319640.png",
+    "title": "VibeVideo",
+    "companyName": "MediaFlow",
+    "id": 20,
+    "description": "VibeVideo is a short-form video platform that makes creation, discovery and remixing fast and fun. Centered around trends and sound clips, the app provides creator-first tools such as in-app beat detection, automated captioning, and a rich remix interface for collaborative content. A discovery algorithm surfaces local trends and surfacing new creators through playlists and challenge prompts. VibeVideo’s creator fund and rapid onboarding for new creators helped it scale quickly after an initial viral phase led by high-visibility creators and shareable templates. Moderation tools combine automated filters with community moderation to keep the platform safe. VibeVideo emphasizes low-latency recording and a lean editor that runs well even on mid-range devices. The app’s viral templates and creator incentives contributed to several multi-region spikes, driving very large cumulative download numbers.",
+    "size": 98.9,
+    "reviews": 201000,
+    "ratingAvg": 4.9,
+    "downloads": 7000000,
+    "ratings": [
+      { "name": "1 star", "count": 3000 },
+      { "name": "2 star", "count": 6000 },
+      { "name": "3 star", "count": 20000 },
+      { "name": "4 star", "count": 60000 },
+      { "name": "5 star", "count": 112000 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/8LbzBzKy/smartwatch-5873121.png",
+    "title": "WatchHub",
+    "companyName": "WearableWorks",
+    "id": 21,
+    "description": "WatchHub is the definitive companion app for modern smartwatches, built to simplify wearable setup, customization and daily health tracking. It offers a polished face gallery with easy one-tap installs, a face editor for layering complications and shortcuts, and a marketplace where third-party designers can publish custom faces and widgets. Beyond aesthetics, WatchHub focuses on meaningful integrations: continuous activity sync, automatic sleep-stage detection, heart-rate trending, and on-device workout summaries designed to preserve battery life. Advanced features include scheduled face switching based on calendar events, context-aware complications (showing commute updates or next meeting), and cross-device continuity so users can manage watch settings from phone or tablet. Privacy is central — sensitive metrics remain local by default with optional encrypted cloud backup for those who want it. The app also includes a tiny companion firmware manager that helps users stage and apply firmware updates safely, and a diagnostic mode to help field support teams triage connectivity issues. WatchHub places emphasis on accessibility, offering large-type modes and voice-guided setup flows, making powerful wearable features approachable for both enthusiasts and new users alike.",
+    "size": 26.1,
+    "reviews": 410,
+    "ratingAvg": 4.0,
+    "downloads": 38000,
+    "ratings": [
+      { "name": "1 star", "count": 30 },
+      { "name": "2 star", "count": 50 },
+      { "name": "3 star", "count": 120 },
+      { "name": "4 star", "count": 140 },
+      { "name": "5 star", "count": 70 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/4gTxrY9k/apps-4439124.png",
+    "title": "PocketTools",
+    "companyName": "TinyUtilities",
+    "id": 22,
+    "description": "PocketTools bundles a set of small but indispensable utilities into a compact, privacy-first app designed for everyday problems. Included tools are a bright flashlight with SOS mode, an accurate unit & currency converter with offline rates, a quick-measure ruler using AR for basic measurements, a minimal QR/Barcode scanner that does not track scans, and a secure memo pad with optional PIN/biometric locking. Each tool is purposely lightweight: they launch instantly and avoid network calls unless the user explicitly enables sync. The app is ideal for people who prefer a single, minimal install instead of many tiny apps. PocketTools also supports user-configurable quick-actions — for example, open the ruler or start a timer from a home-screen shortcut — and includes a compact widget that surfaces the most-used tools. Because the feature set is focused and intentionally limited, PocketTools keeps storage and battery usage extremely low while providing practical value for travelers, students and professionals who need reliable small utilities on the go. The app offers a modest premium tier that removes ads and unlocks additional conversion units and themes.",
+    "size": 9.8,
+    "reviews": 290,
+    "ratingAvg": 3.7,
+    "downloads": 12500,
+    "ratings": [
+      { "name": "1 star", "count": 50 },
+      { "name": "2 star", "count": 80 },
+      { "name": "3 star", "count": 80 },
+      { "name": "4 star", "count": 50 },
+      { "name": "5 star", "count": 30 }
+    ]
+  }
+]
