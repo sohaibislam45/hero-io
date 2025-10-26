@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import useApps from '../Hooks/useApps';
 import AppsCard from '../Components/AppsCard';
 
 const TrendingApps = () => {
     const { app } = useApps();
+    const [search, setSearch] = useState('');
+    console.log(search);
     return (
         <div className='max-w-[1650px] mx-auto'>
             {/* our all apps div */}
@@ -13,7 +15,7 @@ const TrendingApps = () => {
             </div>
 
             {/* search and apps found div */}
-            <div className='flex justify-between mb-5'>
+            <div className='flex flex-col gap-6 md:flex-row justify-between items-center mb-5'>
                 <span className='text-2xl font-semibold'>{app.length} Apps Found</span>
                 <label className="input">
                     <svg className="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -28,7 +30,7 @@ const TrendingApps = () => {
                             <path d="m21 21-4.3-4.3"></path>
                         </g>
                     </svg>
-                    <input type="search" required placeholder="Search Apps" />
+                    <input value={search} onChange={(e)=>setSearch(e.target.value)} type="search" required placeholder="Search Apps" />
                 </label>
             </div>
 
