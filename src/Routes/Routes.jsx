@@ -29,6 +29,10 @@ const router = createBrowserRouter([
                 path: '/installedApps',
                 Component: InstalledApps,
             },
+            {
+                path: '/trendingApps/:id',
+                Component: InstalledApps,
+            },
         ]
     },
 ]);

@@ -5,7 +5,9 @@ import AppsCard from '../Components/AppsCard';
 const TrendingApps = () => {
     const { app } = useApps();
     const [search, setSearch] = useState('');
-    console.log(search);
+    const userSearchBox= search.trim().toLowerCase();
+    const searchedApps=userSearchBox? app.filter(a=>a.title.toLowerCase().includes(userSearchBox)): app;
+    
     return (
         <div className='max-w-[1650px] mx-auto'>
             {/* our all apps div */}
@@ -16,7 +18,7 @@ const TrendingApps = () => {
 
             {/* search and apps found div */}
             <div className='flex flex-col gap-6 md:flex-row justify-between items-center mb-5'>
-                <span className='text-2xl font-semibold'>{app.length} Apps Found</span>
+                <span className='text-2xl font-semibold'>{searchedApps.length} Apps Found</span>
                 <label className="input">
                     <svg className="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                         <g
@@ -37,7 +39,7 @@ const TrendingApps = () => {
             {/* card showing div */}
             <div className='grid grid-cols-1 md:grid-cols-4 gap-7 justify-items-center max-w-[1650px] mx-auto'>
                 {
-                    app.map(app => <AppsCard key={app.id} app={app}></AppsCard>)
+                    searchedApps.map(app => <AppsCard key={app.id} app={app}></AppsCard>)
 
                 }
             </div>
