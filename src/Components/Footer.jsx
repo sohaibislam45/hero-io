@@ -8,7 +8,7 @@ const Footer = () => {
                 <aside className='flex'>
                     <img src={logo} alt="" />
                     <p>
-                        HERO.IO
+                        TriLoop
                         <br />
                         Providing reliable applications since 2007
                     </p>

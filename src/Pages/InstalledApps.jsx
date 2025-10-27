@@ -1,64 +1,51 @@
-import React from 'react';
-import { useParams } from 'react-router';
-import useApps from '../Hooks/useApps';
-import download from '../assets/download.png';
-import like from '../assets/like.png';
-import star from '../assets/star.png';
-import '../App.css'
+import React, { useEffect, useState } from 'react';
+import InstalledAppsCard from '../Components/InstalledAppsCard';
 
 const InstalledApps = () => {
-    const { id } = useParams()
-    const { app, loading, error } = useApps();
-    const findApp = app.find(a => String(a.id) === id)
-    if (loading) return <p>Loading...</p>
-    const { image, title, companyName, downloads, ratingAvg, reviews, size, ratings, description } = findApp || {};
+    const [installList, setInstallList] = useState([]);
+    const [sortOption, setSortOption] = useState('none');
+    useEffect(() => {
+        const saveList = JSON.parse(localStorage.getItem('installApp')) || [];
+        if (saveList) setInstallList(saveList);
+    }, []);
+    // console.log(installList);
 
-    
 
+
+    const sortApp=()=>{
+        if(sortOption==='size-asc'){
+            return [...installList].sort((a,b)=>a.size-b.size);
+        }
+        else if(sortOption==='size-desc'){
+            return [...installList].sort((a,b)=>b.size-a.size);
+        }
+        else{
+            return installList;
+        }
+    }
     return (
         <div className='p-5 md:p-20'>
-            <div className='flex flex-col md:flex-row gap-20'>
-                <div className='bg-white p-5 shadow-xl'>
-                    <img className='w-[350px]' src={image} alt="" />
-                </div>
-                {/* right side */}
-                <div className='w-full'>
-                    <h1 className='text-4xl font-bold mb-2'>{title}</h1>
-                    <h3 className='text-lg font-normal'><span className='text-[#627382]'> Developed by</span> <span className='bg-linear-to-r from-[#632EE3] to-[#9F62F2] bg-clip-text text-transparent'>{companyName}</span></h3>
-                    <div className="divider w-full"></div>
-                    <div className='flex flex-col md:flex-row gap-10 mb-7'>
-                        <div className='flex flex-col items-center'>
-                            <img src={download} alt="" />
-                            <p className='text-[#627382] text-sm my-2'>Download</p>
-                            <p className='text-4xl font-bold'>{downloads}</p>
-                        </div>
-                        <div className='flex flex-col items-center'>
-                            <img src={star} alt="" />
-                            <p className='text-[#627382] text-sm my-2'>Average Ratings</p>
-                            <p className='text-4xl font-bold'>{ratingAvg}</p>
-                        </div>
-                        <div className='flex flex-col items-center'>
-                            <img src={like} alt="" />
-                            <p className='text-[#627382] text-sm my-2'>Total Reviews</p>
-                            <p className='text-4xl font-bold'>{reviews}</p>
-                        </div>
-                    </div>
-                    <div className="flex md:block justify-center">
-                        <button className="relative overflow-hidden px-6 py-3 rounded-lg bg-[#00d390] text-white font-semibold shadow-lg hover:shadow-[#00d390]/70 transition">
-                            <span className="relative z-10">Install Now ({size}) MB</span>
-                            <span className="absolute inset-0 bg-[linear-gradient(120deg,transparent,rgba(255,255,255,0.8),transparent)] animate-shiny"></span>
-                        </button>
-                    </div>
-                </div>
+            <div className='text-center mb-5'>
+                <h1 className='text-5xl font-bold mb-5'>Your Installed Apps</h1>
+                <p className='text-xl text-[#627382]'>Explore All Trending Apps on the Market developed by us</p>
             </div>
-            <div className="divider mt-8"></div>
-            <h2 className='text-2xl font-semibold mb-3'>Rating</h2>
-            {
-                ratings.map(r => <h3>{r.count}</h3>)
-            }
-            <div className="divider mt-8"></div>
-            <h2 className='text-2xl font-semibold mb-3'>Description</h2>
-            <p className='text-[#627382] text-justify'>{description}</p>
+
+            <div className='flex flex-col gap-6 md:flex-row justify-between items-center mb-5'>
+                <span className='text-2xl font-semibold'>{installList.length} Apps Found</span>
+
+                <label className='form-control'>
+                    <select className='btn bg-white' value={sortOption} onChange={e => setSortOption(e.target.value)}>
+                        <option value="none" disabled>Sort By Size</option>
+                        <option value="size-desc">High-&gt;Low</option>
+                        <option value="size-asc">Low-&gt;High</option>
+                    </select>
+                </label>
+            </div>
+            <div>
+                {
+                    sortApp().map(app => <InstalledAppsCard key={app.id} app={app}></InstalledAppsCard>)
+                }
+            </div>
         </div>
     );
 };

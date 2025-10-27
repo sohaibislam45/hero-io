@@ -21,7 +21,7 @@ const Navbar = () => {
                 </div>
                 <div className='flex gap-3 items-center'>
                     <img className='w-10' src={logo} alt="" />
-                    <NavLink to='/home' className="text-xl font-bold">HERO.IO</NavLink>
+                    <NavLink to='/home' className="text-xl font-bold">TriLoop</NavLink>
                 </div>
             </div>
             <div className="navbar-center hidden lg:flex">

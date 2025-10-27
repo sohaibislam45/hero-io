@@ -15,7 +15,7 @@ const Home = () => {
             {/* hero banner section */}
             <div className='max-w-[1650px] mx-auto text-center mt-20'>
                 <h1 className='mb-5 text-7xl font-bold'><span className='block'>We Build</span> <span className='bg-linear-to-b from-[#632EE3] to-[#9F62F2] bg-clip-text text-transparent'>Productive</span> Apps</h1>
-                <p className='text-[#627382] text-xl mb-10'>At HERO.IO, we craft innovative apps designed to make everyday life simpler, smarter, and more exciting. <br /> Our goal is to turn your ideas into digital experiences that truly make an impact.</p>
+                <p className='text-[#627382] text-xl mb-10'>At TriLoop, we craft innovative apps designed to make everyday life simpler, smarter, and more exciting. <br /> Our goal is to turn your ideas into digital experiences that truly make an impact.</p>
                 <button className='btn bg-white text-xl py-6 mr-6 hover:bg-gray-200'>
                     <img src={appstore} alt="" />Google Play
                 </button>

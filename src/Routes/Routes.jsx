@@ -5,6 +5,7 @@ import TrendingApps from '../Pages/TrendingApps';
 import Home from '../Pages/Home';
 import ErrorPage from '../Pages/ErrorPage';
 import InstalledApps from '../Pages/InstalledApps';
+import DetailsApp from '../Pages/DetailsApp';
 
 const router = createBrowserRouter([
     {
@@ -26,13 +27,13 @@ const router = createBrowserRouter([
                 Component: TrendingApps,
             },
             {
-                path: '/installedApps',
-                Component: InstalledApps,
+                path: '/trendingApps/:id',
+                Component: DetailsApp,
             },
             {
-                path: '/trendingApps/:id',
+                path: '/installedApps',
                 Component: InstalledApps,
-            },
+            }
         ]
     },
 ]);
