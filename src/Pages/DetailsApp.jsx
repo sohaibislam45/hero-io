@@ -6,6 +6,8 @@ import like from '../assets/like.png';
 import star from '../assets/star.png';
 import '../App.css'
 import { ToastContainer, toast } from 'react-toastify';
+import { ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid, Legend } from 'recharts';
+
 
 const DetailsApp = () => {
     const { id } = useParams()
@@ -19,7 +21,7 @@ const DetailsApp = () => {
         let updateList = [];
         if (existingApp) {
             const isDuplicate = existingApp.some(a => a.id === findApp.id)
-            if (isDuplicate) return toast.error('Already Installed!!', );
+            if (isDuplicate) return toast.error('Already Installed!!',);
             updateList = [...existingApp, findApp];
         }
         else {
@@ -67,9 +69,35 @@ const DetailsApp = () => {
             </div>
             <div className="divider mt-8"></div>
             <h2 className='text-2xl font-semibold mb-3'>Rating</h2>
-            {
-                ratings.map((r, index) => <h3 key={index}>{r.count}</h3>)
-            }
+
+            <div style={{ width: '100%', height: 300 }} className="mb-6">
+                <ResponsiveContainer>
+                    <BarChart
+                        data={ratings}
+                        layout="vertical"
+                        margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
+                    >
+                        <CartesianGrid strokeDasharray="3 3" />
+                        <XAxis type="number" allowDecimals={false} />
+                        <YAxis
+                            type="category"
+                            dataKey="name"
+                            tick={{ fontSize: 14 }}
+                            width={80}
+                        />
+                        <Tooltip />
+                        <Legend />
+                        <Bar
+                            dataKey="count"
+                            name="Votes"
+                            fill="#00d390"
+                            barSize={25}
+                            radius={[0, 6, 6, 0]}
+                        />
+                    </BarChart>
+                </ResponsiveContainer>
+            </div>
+
             <div className="divider mt-8"></div>
             <h2 className='text-2xl font-semibold mb-3'>Description</h2>
             <p className='text-[#627382] text-justify'>{description}</p>

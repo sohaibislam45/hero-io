@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 import AppsCard from '../Components/AppsCard';
 import appstore from '../assets/appstore.png';
 import playstore from '../assets/playstore.png';
@@ -7,8 +7,8 @@ import hero from '../assets/hero.png';
 import useApps from '../Hooks/useApps';
 
 const Home = () => {
-    const {app, error, loading}=useApps();
-    const sliceApp= app.slice(0,8);
+    const { app, loading } = useApps();
+    const sliceApp = app.slice(0, 8);
     // console.log(appsData);
     return (
         <div>
@@ -53,13 +53,32 @@ const Home = () => {
             </div>
             <h1 className='text-5xl text-center mb-4 font-bold'>Trending Apps</h1>
             <p className='text-xl text-center mb-10 text-[#627382]'>Explore All Trending Apps on the Market developed by us</p>
-            {/* cards display section */}
-            <div className='grid grid-cols-1 md:grid-cols-4 gap-7 justify-items-center max-w-[1650px] mx-auto'>
-                {
-                    sliceApp.map(app => <AppsCard key={app.id} app={app}></AppsCard>)
 
+            {/* cards display section */}
+            <div className='grid grid-cols-1 md:grid-cols-4 gap-7 justify-items-center max-w-[1650px] mx-auto px-4'>
+                {loading
+                    ? Array.from({ length: 8 }).map((_, i) => (
+                        <div key={i} className="card bg-base-100 md:w-96 w-full shadow-xl animate-pulse">
+                            <div className="px-10 pt-10">
+                                <div className="bg-gray-200 rounded-xl w-full h-56" />
+                            </div>
+                            <div className="card-body items-center text-center">
+                                <div className="h-6 w-3/4 bg-gray-200 rounded mb-4" />
+                                <div className="w-full flex justify-between mt-5">
+                                    <div className="h-6 w-24 bg-gray-200 rounded" />
+                                    <div className="h-6 w-20 bg-gray-200 rounded" />
+                                </div>
+                                <div className="h-3 w-full mt-3" />
+                            </div>
+                        </div>
+                    ))
+                    : sliceApp.map(app => <AppsCard key={app.id} app={app} />)
                 }
             </div>
+
+
+
+
             <div className="flex justify-center my-10">
                 <Link to='/trendingApps' className='btn btn-lg bg-linear-to-r from-[#632EE3] to-[#9F62F2] text-white border-none'>Show all</Link>
             </div>

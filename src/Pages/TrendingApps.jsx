@@ -3,11 +3,11 @@ import useApps from '../Hooks/useApps';
 import AppsCard from '../Components/AppsCard';
 
 const TrendingApps = () => {
-    const { app } = useApps();
+    const { app, loading } = useApps();
     const [search, setSearch] = useState('');
-    const userSearchBox= search.trim().toLowerCase();
-    const searchedApps=userSearchBox? app.filter(a=>a.title.toLowerCase().includes(userSearchBox)): app;
-    
+    const userSearchBox = search.trim().toLowerCase();
+    const searchedApps = userSearchBox ? app.filter(a => a.title.toLowerCase().includes(userSearchBox)) : app;
+
     return (
         <div className='max-w-[1650px] mx-auto'>
             {/* our all apps div */}
@@ -32,17 +32,36 @@ const TrendingApps = () => {
                             <path d="m21 21-4.3-4.3"></path>
                         </g>
                     </svg>
-                    <input value={search} onChange={(e)=>setSearch(e.target.value)} type="search" required placeholder="Search Apps" />
+                    <input value={search} onChange={(e) => setSearch(e.target.value)} type="search" required placeholder="Search Apps" />
                 </label>
             </div>
 
             {/* card showing div */}
-            <div className='grid grid-cols-1 md:grid-cols-4 gap-7 justify-items-center max-w-[1650px] mx-auto'>
-                {
-                    searchedApps.map(app => <AppsCard key={app.id} app={app}></AppsCard>)
+            {loading ? (
+                <div className='grid grid-cols-1 md:grid-cols-4 gap-7 justify-items-center max-w-[1650px] mx-auto px-4'>
+                    {Array.from({ length: (searchedApps.length || 16) }).map((_, i) => (
+                        <div key={i} className="card bg-base-100 md:w-96 w-full shadow-xl animate-pulse">
+                            <div className="px-10 pt-10">
+                                <div className="bg-gray-200 rounded-xl w-full h-56" />
+                            </div>
 
-                }
-            </div>
+                            <div className="card-body items-center text-center">
+                                <div className="h-6 w-3/4 bg-gray-200 rounded mb-4" />
+                                <div className="w-full flex justify-between mt-5">
+                                    <div className="h-6 w-24 bg-gray-200 rounded" />
+                                    <div className="h-6 w-20 bg-gray-200 rounded" />
+                                </div>
+                                <div className="h-3 w-full mt-3" />
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            ) : (
+                <div className='grid grid-cols-1 md:grid-cols-4 gap-7 justify-items-center max-w-[1650px] mx-auto px-4'>
+                    {searchedApps.map(app => <AppsCard key={app.id} app={app} />)}
+                </div>
+            )}
+
         </div>
     );
 };

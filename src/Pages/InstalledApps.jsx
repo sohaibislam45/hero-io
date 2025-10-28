@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import InstalledAppsCard from '../Components/InstalledAppsCard';
+import { Link } from 'react-router';
 
 const InstalledApps = () => {
     const [installList, setInstallList] = useState([]);
@@ -9,20 +10,39 @@ const InstalledApps = () => {
         if (saveList) setInstallList(saveList);
     }, []);
     // console.log(installList);
+    if (installList.length === 0) return (
+        <div className="flex flex-col items-center justify-center h-screen text-center">
+            <h1 className="text-5xl font-bold mb-5">No Installed Apps</h1>
+            <Link
+                to="/trendingApps"
+                className="btn bg-[#00d390] text-white px-6 py-2 rounded-lg shadow-md hover:shadow-[#00d390]/50 transition"
+            >
+                Go to Apps
+            </Link>
+        </div>
+    );
 
 
-
-    const sortApp=()=>{
-        if(sortOption==='size-asc'){
-            return [...installList].sort((a,b)=>a.size-b.size);
+    const sortApp = () => {
+        if (sortOption === 'size-asc') {
+            return [...installList].sort((a, b) => a.size - b.size);
         }
-        else if(sortOption==='size-desc'){
-            return [...installList].sort((a,b)=>b.size-a.size);
+        else if (sortOption === 'size-desc') {
+            return [...installList].sort((a, b) => b.size - a.size);
         }
-        else{
+        else {
             return installList;
         }
     }
+
+    const handleUninstall = (id) => {
+        const existing = JSON.parse(localStorage.getItem('installApp')) || [];
+        const updated = existing.filter(a => String(a.id) !== String(id));
+        localStorage.setItem('installApp', JSON.stringify(updated));
+        setInstallList(updated);
+    };
+
+
     return (
         <div className='p-5 md:p-20'>
             <div className='text-center mb-5'>
@@ -43,7 +63,8 @@ const InstalledApps = () => {
             </div>
             <div>
                 {
-                    sortApp().map(app => <InstalledAppsCard key={app.id} app={app}></InstalledAppsCard>)
+                    sortApp().map(app => (<InstalledAppsCard key={app.id} app={app} onUninstall={handleUninstall} />))
+
                 }
             </div>
         </div>

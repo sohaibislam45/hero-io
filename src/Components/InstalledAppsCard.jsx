@@ -1,8 +1,13 @@
 import { ArrowDownToLine, Star } from 'lucide-react';
 import React from 'react';
+import { toast } from 'react-toastify';
 
-const InstalledAppsCard = ({ app }) => {
+const InstalledAppsCard = ({ app, onUninstall }) => {
     const { image, title, downloads, ratingAvg, size } = app;
+    const handleUninstallClick = () => {
+        onUninstall?.(app.id);
+        toast.success("Uninstalled Successfully");
+    };
     return (
         <div className='flex justify-between my-4 items-center gap-10 bg-[#fcfcfc] p-3 rounded-xl shadow-md'>
             <div className='flex gap-10'>
@@ -19,7 +24,9 @@ const InstalledAppsCard = ({ app }) => {
                 </div>
             </div>
 
-            <button className='btn bg-[#00d390] text-white'>Uninstall</button>
+            <div>
+                <button onClick={handleUninstallClick} className='btn bg-[#00d390] text-white'>Uninstall</button>
+            </div>
         </div>
 
     );
