@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { Navigate } from 'react-router-dom';
 import useApps from '../Hooks/useApps';
@@ -13,24 +13,42 @@ import { ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGri
 const DetailsApp = () => {
     const { id } = useParams()
     const { app, loading } = useApps();
+    const [isInstalled, setIsInstalled] = useState(false);
+    useEffect(() => {
+        const existing = JSON.parse(localStorage.getItem('installApp')) || [];
+        const already = existing.some(a => String(a.id) === String(id));
+        if (already) setIsInstalled(true);
+    }, [id]);
+
     const findApp = app.find(a => String(a.id) === id)
     if (loading) return <p>Loading...</p>
+
+
     const { image, title, companyName, downloads, ratingAvg, reviews, size, ratings, description } = findApp || {};
 
     const handleInstall = () => {
-        const existingApp = JSON.parse(localStorage.getItem('installApp')) || [];
-        let updateList = [];
-        if (existingApp) {
-            const isDuplicate = existingApp.some(a => a.id === findApp.id)
-            if (isDuplicate) return toast.error('Already Installed!!',);
-            updateList = [...existingApp, findApp];
+        if (!findApp) return toast.error('App not found');
+        if (isInstalled) return toast.info('Already installed');
+        setIsInstalled(true);
+        try {
+            const existing = JSON.parse(localStorage.getItem('installApp')) || [];
+            const already = existing.some(a => String(a.id) === String(findApp.id));
+
+            if (already) {
+                toast.error('Already Installed!!');
+                return;
+            }
+
+            const updated = [...existing, findApp];
+            localStorage.setItem('installApp', JSON.stringify(updated));
+            toast.success('Install Successfully');
+        } catch (err) {
+            setIsInstalled(false);
+            console.error('Failed to save install:', err);
+            toast.error('Failed to install. Try again.');
         }
-        else {
-            updateList.push(findApp);
-        }
-        localStorage.setItem('installApp', JSON.stringify(updateList))
-        toast.success("Install Successfully")
-    }
+    };
+
     if (!findApp) {
         return <Navigate to="/not-found" replace />;
     }
@@ -63,10 +81,21 @@ const DetailsApp = () => {
                         </div>
                     </div>
                     <div className="flex md:block justify-center">
-                        <button onClick={handleInstall} className="relative overflow-hidden px-6 py-3 rounded-lg bg-[#00d390] text-white font-semibold shadow-lg hover:shadow-[#00d390]/70 transition">
-                            <span className="relative z-10">Install Now ({size}) MB</span>
-                            <span className="absolute inset-0 bg-[linear-gradient(120deg,transparent,rgba(255,255,255,0.8),transparent)] animate-shiny"></span>
+                        <button
+                            onClick={handleInstall}
+                            disabled={Boolean(isInstalled)}
+                            className={`relative overflow-hidden px-6 py-3 rounded-lg text-white font-semibold shadow-lg transition
+                            ${isInstalled ? 'bg-gray-400 opacity-70 cursor-not-allowed' : 'bg-[#00d390] hover:shadow-[#00d390]/70'}`}>
+                            <span className="relative z-10">
+                                {isInstalled ? 'Installed' : `Install Now (${size}) MB`}
+                            </span>
+                            {!isInstalled && (
+                                <span className="absolute inset-0 bg-[linear-gradient(120deg,transparent,rgba(255,255,255,0.8),transparent)] animate-shiny"></span>
+                            )}
                         </button>
+
+
+
                     </div>
                 </div>
             </div>

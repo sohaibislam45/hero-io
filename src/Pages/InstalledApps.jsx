@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import InstalledAppsCard from '../Components/InstalledAppsCard';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
+import { toast, ToastContainer } from 'react-toastify';
 
 const InstalledApps = () => {
     const [installList, setInstallList] = useState([]);
@@ -9,7 +10,6 @@ const InstalledApps = () => {
         const saveList = JSON.parse(localStorage.getItem('installApp')) || [];
         if (saveList) setInstallList(saveList);
     }, []);
-    // console.log(installList);
     if (installList.length === 0) return (
         <div className="flex flex-col items-center justify-center h-screen text-center">
             <h1 className="text-5xl font-bold mb-5">No Installed Apps</h1>
@@ -40,7 +40,9 @@ const InstalledApps = () => {
         const updated = existing.filter(a => String(a.id) !== String(id));
         localStorage.setItem('installApp', JSON.stringify(updated));
         setInstallList(updated);
+        toast.success('Uninstalled Successfully');
     };
+
 
 
     return (
@@ -67,6 +69,7 @@ const InstalledApps = () => {
 
                 }
             </div>
+            <ToastContainer />
         </div>
     );
 };
