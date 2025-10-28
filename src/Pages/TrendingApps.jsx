@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import useApps from '../Hooks/useApps';
 import AppsCard from '../Components/AppsCard';
+import { Link } from 'react-router-dom';
 
 const TrendingApps = () => {
+
     const { app, loading } = useApps();
     const [search, setSearch] = useState('');
     const userSearchBox = search.trim().toLowerCase();
@@ -39,12 +41,11 @@ const TrendingApps = () => {
             {/* card showing div */}
             {loading ? (
                 <div className='grid grid-cols-1 md:grid-cols-4 gap-7 justify-items-center max-w-[1650px] mx-auto px-4'>
-                    {Array.from({ length: (searchedApps.length || 16) }).map((_, i) => (
+                    {Array.from({ length: 8 }).map((_, i) => (
                         <div key={i} className="card bg-base-100 md:w-96 w-full shadow-xl animate-pulse">
                             <div className="px-10 pt-10">
                                 <div className="bg-gray-200 rounded-xl w-full h-56" />
                             </div>
-
                             <div className="card-body items-center text-center">
                                 <div className="h-6 w-3/4 bg-gray-200 rounded mb-4" />
                                 <div className="w-full flex justify-between mt-5">
@@ -57,10 +58,22 @@ const TrendingApps = () => {
                     ))}
                 </div>
             ) : (
-                <div className='grid grid-cols-1 md:grid-cols-4 gap-7 justify-items-center max-w-[1650px] mx-auto px-4'>
-                    {searchedApps.map(app => <AppsCard key={app.id} app={app} />)}
-                </div>
+                searchedApps.length === 0 ? (
+                    <div className="h-64 flex flex-col items-center justify-center text-center">
+                        <h2 className="text-2xl font-semibold mb-3">No apps found</h2>
+                        <p className="text-[#627382] mb-4">Try a different search or browse all apps.</p>
+                        <Link to="/trendingApps" onClick={() => setSearch('')} className="btn bg-[#632EE3] text-white">
+                            Show all apps
+                        </Link>
+
+                    </div>
+                ) : (
+                    <div className='grid grid-cols-1 md:grid-cols-4 gap-7 justify-items-center max-w-[1650px] mx-auto px-4'>
+                        {searchedApps.map(app => <AppsCard key={app.id} app={app} />)}
+                    </div>
+                )
             )}
+
 
         </div>
     );

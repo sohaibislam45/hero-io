@@ -1,5 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router';
+import { Navigate } from 'react-router-dom';
 import useApps from '../Hooks/useApps';
 import download from '../assets/download.png';
 import like from '../assets/like.png';
@@ -30,7 +31,9 @@ const DetailsApp = () => {
         localStorage.setItem('installApp', JSON.stringify(updateList))
         toast.success("Install Successfully")
     }
-
+    if (!findApp) {
+        return <Navigate to="/not-found" replace />;
+    }
     return (
         <div className='p-5 md:p-20'>
             <div className='flex flex-col md:flex-row gap-20'>
